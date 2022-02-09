@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class CoffeeMachine {
+public class CoffeeMachine { //@TODO: add limit for fill in
     private int waterAmount;
     private int cupQuantity;
     private int money;
@@ -16,7 +16,7 @@ public class CoffeeMachine {
         this.beansAmount = beansAmount;
     }
 
-    public int coffeeRemaining(Coffee coffee) { //change to available
+    public int coffeeRemaining(Coffee coffee) {
         int[] arr = new int[4];
 
         if (coffee.getWaterMl() != 0) {
@@ -55,7 +55,7 @@ public class CoffeeMachine {
         this.setCupQuantity(cup);
     }
 
-    protected void handleFill(int waterAmount, int milkAmount, int beansAmount, int cupQuantity) {
+    protected void handleFill(int waterAmount, int milkAmount, int beansAmount, int cupQuantity) {//add limit
         this.setWaterAmount(this.getWaterAmount() + waterAmount);
         this.setMilkAmount(this.getMilkAmount() + milkAmount);
         this.setBeansAmount(this.getBeansAmount() + beansAmount);
