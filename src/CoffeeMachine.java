@@ -55,11 +55,13 @@ public class CoffeeMachine { /*@TODO: add limit for fill in*/
         this.setCupQuantity(cup);
     }
 
-    protected void handleFill(int waterAmount, int milkAmount, int beansAmount, int cupQuantity) {//add limit
-        this.setWaterAmount(this.getWaterAmount() + waterAmount);
-        this.setMilkAmount(this.getMilkAmount() + milkAmount);
-        this.setBeansAmount(this.getBeansAmount() + beansAmount);
-        this.setCupQuantity(this.getCupQuantity() + cupQuantity);
+    protected void handleFill(int waterAmount, int milkAmount, int beansAmount, int cupQuantity) {
+        if (waterAmount >= 0 && milkAmount >= 0 && beansAmount >= 0 && cupQuantity >= 0) {
+            this.setWaterAmount(this.getWaterAmount() + waterAmount);
+            this.setMilkAmount(this.getMilkAmount() + milkAmount);
+            this.setBeansAmount(this.getBeansAmount() + beansAmount);
+            this.setCupQuantity(this.getCupQuantity() + cupQuantity);
+        }
     }
 
     protected void handleWithdraw() {
