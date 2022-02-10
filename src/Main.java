@@ -53,7 +53,6 @@ public class Main {
                     default:
                         System.out.println("Error");
                 }
-//                break;
             }
             if (inputValue.equals("take")) {
                 coffeeMachine.handleWithdraw();
@@ -67,7 +66,7 @@ public class Main {
                 int beans = scanner.nextInt();
                 int cup = scanner.nextInt();
                 System.out.println("water: " + water + " milk " + milk + " beans " + beans + " cup " + cup);
-                coffeeMachine.handleFill(water, milk, beans, cup); //setLimit
+                coffeeMachine.handleFill(water, milk, beans, cup);
                 System.out.println(coffeeMachine.displayRemaining());
             }
             if (inputValue.equals("exit")) {
