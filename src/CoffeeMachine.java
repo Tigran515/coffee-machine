@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class CoffeeMachine { /*@TODO: add limit for fill in*/
+public class CoffeeMachine {
     private int waterAmount;
     private int cupQuantity;
     private int money;
